@@ -13,5 +13,6 @@ gnt-*
 *.pub
 
 #dbt env
-/dbt/logs
-/dbt/superstore/logs
+/dbt-superstore/logs
+/dbt-superstore/target
+/dbt-superstore/models/example/
