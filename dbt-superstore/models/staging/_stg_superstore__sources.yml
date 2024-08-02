@@ -1,0 +1,49 @@
+
+version: 2
+
+sources:
+  - name: superstore
+    database: superstore_db
+    schema: raw
+    tables:
+      - name: managers
+        description: Users or managers of store.
+        loaded_at_field: _etl_loadtime
+        config:
+          enabled: true
+      - name: returns
+        description: Orders wich returned back to store.
+        loaded_at_field: _etl_loadtime
+        config:
+          enabled: true
+
+      - name: orders
+        description: Full order information.
+        loaded_at_field: _etl_loadtime
+        config:
+          enabled: true
+
+
+#      example
+
+# sources:
+#   - name: jaffle
+#     database: superstore_db
+#     schema: raw
+#     tables:
+#       - name: managers
+#       - name: returns
+
+#       - name: orders
+#         # loaded_at_field: _etl_loadtime
+#         # freshness:
+#         #   warn_after: {count: 12, period: hour}
+#         #   error_after: {count: 24, period: hour}
+#         # tests:
+#         #   - assert_sales_is_positive
+#         columns:
+#               - name: order_id
+#                 tests:
+#                   #- unique
+#                   - not_null
+#               #- name: sales
