@@ -1,0 +1,17 @@
+version: 2
+
+#models:
+#  - name: stg_superstore_ship_modes
+#    config:
+#      materialized: view
+
+models:
+  - name: stg_superstore__orders
+    config:
+      materialized: table
+  - name: stg_superstore__managers
+    config:
+      materialized: table
+  - name: stg_superstore__returns
+    config:
+      materialized: table
