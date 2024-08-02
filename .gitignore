@@ -2,4 +2,16 @@
 /dc-shelltest
 /secrets
 /init.d
+
+# dc means docker, docker commands testing
 dc-*.txt
+
+# 'gnt-' = git no track, for temp files while testing commands
+gnt-*
+
+# exclude ssh keys
+*.pub
+
+#dbt env
+/dbt/logs
+/dbt/superstore/logs
